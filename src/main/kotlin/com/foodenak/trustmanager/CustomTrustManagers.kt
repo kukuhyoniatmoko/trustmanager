@@ -10,9 +10,9 @@ import javax.net.ssl.TrustManagerFactory
 import javax.net.ssl.X509TrustManager
 
 /**
- * Created by kukuh on 16/03/18.
+ * A trust manager that use custom key if fail with the default one
  */
-internal class CustomTrustManagers @Throws(KeyStoreException::class,
+@Suppress("unused") internal class CustomTrustManagers @Throws(KeyStoreException::class,
     InvalidAlgorithmParameterException::class, NoSuchAlgorithmException::class,
     CertificateException::class)
 constructor(trustStore: KeyStore) : X509TrustManager {
